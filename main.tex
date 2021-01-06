@@ -17,15 +17,12 @@
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-\usepackage[margin = 1in]{geometry}
+\usepackage[margin = 0.7in]{geometry}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{wrapfig}
 \usepackage{graphicx}
-
-%--------------UNDERLINING---------------
-% taken from https://alexwlchan.net/2017/10/latex-underlines/
 
 \usepackage{contour}
 \usepackage{ulem}
@@ -165,14 +162,14 @@ UprightFont = basictitlefont
     \myuline{arthurgoldblatt}} $|$
 \faPhone
 \thinspace \thinspace
-(510)295-3358
+(510) 295-3358
 
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of Berkeley, California}{Berkeley}
-      {B. Eng. Electrical Engineering and Computer Science}{Aug. 2017 -- May 2021}
+      {B. Eng. Electrical Engineering and Computer Science}{Aug. 2018 -- May 2022}
       \resumeItemListStart
       
         \resumeItem{3.79 GPA}
@@ -181,51 +178,93 @@ UprightFont = basictitlefont
       
   \resumeSubHeadingListEnd
   
-    %-----------PROJECTS-----------
+
+%-----------PROJECTS-----------
 \section{Coding Projects}
     \resumeSubHeadingListStart
+    
+    \iffalse
+    %\iftrue
       \resumeProjectHeading
-          {\href{https://github.com/hkrsmk/beepboop-shopee-code-league-2020}{\myuline{\textbf{Shopee Code League}}} $|$ \textit{Python, Jupyter Notebooks, Google Cloud Platform}}{June -- Aug 2020}
+          {\href{https://docs.google.com/document/d/1KDkTLrHkdisztk3NpyClVIrR6Kd5y5qNf7zhpmSb16U/edit?usp=sharing}{\myuline{\textbf{Voice Controlled Car}}} $|$ \textit{Energia, TI Launchpad Circuitry}}{June-August 2020}
           \resumeItemListStart
-            \resumeItem{Set up data pipeline: Kaggle > cloud storage > Google Colab Notebooks\\for faster analysis}
-            \resumeItem{Set up github repository for team}
+            \resumeItem{Build robotic voice-controlled car, moves in different directions and distances depended on the worded command}
+            \resumeItem{Utilize learning from control by establishing feedback and control using eigenvalue placement}
+            \resumeItem{Build mic-board that records voice inputs using a DAC and ADC we also build}
+            \resumeItem{Train car to classify commands and react according with unsupervised learning (Singular Value Decomposition & Principal Component Analysis)}
           \resumeItemListEnd
+          \fi
+          
+      \resumeProjectHeading
+          {\href{}{\myuline{\textbf{NumC}}} $|$ \textit{C, Python}}{May 2020}
+          \resumeItemListStart
+            \resumeItem{Emulate Numpy Functionality by writing methods in C}
+            \resumeItem{Translate methods in C using Python’s C API reference}
+            \resumeItem{Speed up code by using techniques such as SIMD and Caching}
+            \resumeItem{Results in code that manipulates matrices up to 100x faster than Python without optimizations}
+          \resumeItemListEnd
+          
+      \resumeProjectHeading
+          {\href{}{\myuline{\textbf{Honest}}} $|$ \textit{Swift, Google Firebase, PHP, MySql}}{October 2019}
+          \resumeItemListStart
+            \resumeItem{Developed an IOS app in XCode using Swift and Google Firebase that scans QR codes for product authentication}
+            \resumeItem{Generate unique QR codes on the merchant’s end and compile them into a sharable and downloadable pdf file}
+            \resumeItem{Connect front end to back end with Google Firebase after running to some issues with using PHP and MySql}
+            \resumeItem{Utilize the user’s camera to check if the QR code is in the database and therefore authentic}
+          \resumeItemListEnd
+          
+      \resumeProjectHeading
+          {\href{}{\myuline{\textbf{Pacman AI}}} $|$ \textit{Python}}{September 2019}
+          \resumeItemListStart
+            \resumeItem{Create a Python program that allows Pacman to solve complex mazes.}
+            \resumeItem{Implement a variety of search algorithms (A*, UCS) along with determining consistent heuristics.}
+            \resumeItem{Utilize stacks and priority queues to keep track of fringe for search problems.}
+            \resumeItem{Optimize heuristic for finding nearest food by accounting for walls; performed 25\% better than expected.}
+          \resumeItemListEnd
+          
+        \resumeProjectHeading
+          {\href{}{\myuline{\textbf{Gitlet: Version Control System}}} $|$ \textit{Java}}{August 2019}
+          \resumeItemListStart
+            \resumeItem{Utilize Java to design and create a version control system similar to Git.}
+            \resumeItem{Read in arguments from command line, allowing for the storage and access of the user’s files.}
+            \resumeItem{Ensure persistence by serializing and writing files to the disk using Java’s Serializable Interface and java.io}
+            \resumeItem{Organize the user’s files in directories by tagging them with their respective SHA-1 ID’s.}
+            \resumeItem{Deal with merge conflicts by comparing SHA-1 IDs of committed files and editing file contents to flag conflict.}
+          \resumeItemListEnd 
+      
     \resumeSubHeadingListEnd
 
 
+
+
+%\iffalse
+\iftrue
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
   
     \resumeSubheading
-      {Analyst}{May 2020 -- Present}
-      {ALLFED - Alliance to Feed the Earth in Disasters}{Remote, part-time}
+      {Academic Tutor}{Oct 2019 -- Present}
+      {UC Berkeley}{remote, part time}
       \resumeItemListStart
-        \resumeItem{Final year project}
-        \resumeItem{Research on global catastrophic risks and how they affect industry}
-        \resumeItem{Aim to answer this question: If all of our electricity grids shut down for 5 years or more, how can we preserve industry and infrastructure such that we can resume industry as quickly as possible?}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Research Associate}{Feb -- Mar 2020}
-      {DouxMatok}{Petach Tikva, Israel}
-      \resumeItemListStart
-        \resumeItem{Synthesised sugars with new additives using vacuum mixers}
-        \resumeItem{Proposed new research protocol to test food products}
-        \resumeItem{Prepared rheology calibration curves}
+        \resumeItem{Tutor students 1 on 1 for subjects such as Data Structures, Data Science, Linear Algebra, etc.}
+        \resumeItem{Took CS 370 to learn about CS pedagogy}
+        \resumeItem{Adapt to remote learning by using Zoom and screen sharing to help my students}
       \resumeItemListEnd
       
+    \iffalse
+    %\iftrue
     \resumeSubheading
-      {Research Assistant}{Jul 2019 -- Jan 2020}
-      {Cuberg Inc.}{Emeryville, CA, USA}
+      {Golf Attendant}{Jan 2021 -- Present}
+      {Tilden Park Golf Course}{Berkeley, CA, part-time}
       \resumeItemListStart
-        \resumeItem{Worked in the glovebox: built 412 coin cells, synthesised 125 electrolytes}
-        \resumeItem{Created and upgraded three critical tools in Google sheets and Jupyter notebooks for better data analysis, which automated previously-manual processes}
-        \resumeItem{Built battery testing equipment (software and hardware)}
-        \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
-        \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
-        \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
+        \resumeItem{Recruit and sign people up to the course's Players Club}
+        \resumeItem{Manage the flow of golf carts}
+        \resumeItem{Ensure we are not falling behind on the tee time schedule by making sure people tee off promptly without issue}
       \resumeItemListEnd
+     \fi
+      
+\fi
       
       \iffalse
       % \iftrue
@@ -238,8 +277,6 @@ UprightFont = basictitlefont
      \resumeItemListEnd
     \resumeSubHeadingListEnd
 %-------------------------------------------
-
-    \fi
 
     \resumeSubheading
       {ESG Data Analyst}{May -- Aug 2018}
@@ -268,9 +305,11 @@ UprightFont = basictitlefont
         \resumeItem{Achieved best presentation award (out of 9 pairs of people)}
       \resumeItemListEnd
 \fi
+\fi
 
   \resumeSubHeadingListEnd
 
+\iffalse
 %-----------RESEARCH-----------
 \section{Research (papers linked)}
   \resumeSubHeadingListStart
@@ -304,7 +343,9 @@ UprightFont = basictitlefont
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
+  \fi
 
+\iffalse
 %-----------CCAs-----------
 \section{Extracurriculars}
     \resumeSubHeadingListStart
@@ -341,6 +382,7 @@ UprightFont = basictitlefont
       \resumeItemListEnd
           
     \resumeSubHeadingListEnd
+\fi
 
 \iffalse
 %-----------PROGRAMMING SKILLS-----------
@@ -348,8 +390,7 @@ UprightFont = basictitlefont
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages}{: Python, C/C++, SQL, JavaScript, HTML/CSS, R} \\
-     \textbf{Developer Tools}{: Jupyter Notebooks, Git, Google Cloud Platform, VS Code, Amazon AWS} \\
-     }
+     %\textbf{Developer Tools}{: Jupyter Notebooks, Git, Google Cloud Platform, VS Code, Amazon AWS} \\
      }
      }
  \end{itemize}
@@ -363,13 +404,22 @@ UprightFont = basictitlefont
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, C/C++, SQL, JavaScript, HTML/CSS, R} \\
-     \textbf{Frameworks}{: WordPress} \\
-     \textbf{Developer Tools}{: Jupyter Notebooks, Git, Google Cloud Platform, VS Code, Amazon AWS} \\
+     \textbf{Languages}{: Python, Java, Go, C, SQL, Lisp, JavaScript, HTML/CSS} \\
+     %\textbf{Frameworks}{: WordPress} \\
+     \textbf{Developer Tools}{: Jupyter Notebooks, Git, Google Cloud Platform, X Code, Amazon AWS} \\
      \textbf{Libraries}{: pandas, plotly}
     }}
  \end{itemize}
 \fi
 
+%-------------------------------------------
+
+%-----------INTERESTS-----------
+\section{Interests}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    Books (most recent: \textit{Just Mercy}) | Golf | Road Biking | Skiing | Tennis | Basketball | Stormy Weather | Tea 
+    }}
+ \end{itemize}
 %-------------------------------------------
 \end{document}
